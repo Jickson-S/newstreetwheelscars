@@ -1,0 +1,42 @@
+node_modules
+.cache
+backend/.cache
+dist
+build
+*.log
+backend/puppeteer_cache/
+puppeteer_cache/
+**/puppeteer_cache/
+
+backend/puppeteer_cache/
+backend/session_bot*/
+**/chrome-mac*/
+*.app/# dependencies
+node_modules/
+
+# builds
+dist/
+build/
+
+# caches
+.cache/
+backend/.cache/
+
+# logs
+*.log
+
+# puppeteer / chrome cache (IMPORTANT)
+backend/puppeteer_cache/
+puppeteer_cache/
+**/puppeteer_cache/
+
+# bot/session chrome data (VERY IMPORTANT)
+backend/session_bot*/
+
+# macOS / app artifacts
+*.app/
+.DS_Store
+
+# chromium / chrome binaries
+**/chrome-mac*/
+**/chrome*/
