@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../api/axios";
+import api, { BACKEND_URL } from "../api/axios";
 import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { Users, Fuel, Sparkles, Filter, ShieldCheck, MapPin } from "lucide-react";
@@ -134,7 +134,7 @@ export default function Cars() {
                 <div className="relative aspect-video bg-slate-900 flex items-center justify-center overflow-hidden border-b border-slate-800/80">
                   {car.image ? (
                     <img
-                      src={`http://localhost:5001/uploads/${car.image}`}
+                      src={`${BACKEND_URL}/uploads/${car.image}`}
                       alt={car.carName}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

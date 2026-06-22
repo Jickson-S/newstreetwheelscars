@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../api/axios";
+import api, { BACKEND_URL } from "../api/axios";
 import AdminLayout from "./AdminLayout";
 import { Trash2, AlertCircle, Sparkles, Fuel, Users } from "lucide-react";
 
@@ -87,7 +87,7 @@ export default function AdminCars() {
                   {/* Vehicle Thumbnail */}
                   {car.image ? (
                     <img
-                      src={`http://localhost:5001/uploads/${car.image}`}
+                      src={`${BACKEND_URL}/uploads/${car.image}`}
                       alt={car.carName}
                       className="w-28 aspect-video object-cover rounded-xl bg-slate-900 border border-slate-800 shrink-0"
                     />

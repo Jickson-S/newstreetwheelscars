@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import api from "../api/axios";
+import api, { BACKEND_URL } from "../api/axios";
 import { useParams, useNavigate, Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { Calendar, MapPin, CreditCard, CheckCircle, Wallet, ArrowRight, ArrowLeft, ShieldCheck, Lock } from "lucide-react";
@@ -295,7 +295,7 @@ export default function Booking() {
               
               {car.image && (
                 <img
-                  src={`http://localhost:5001/uploads/${car.image}`}
+                  src={`${BACKEND_URL}/uploads/${car.image}`}
                   alt={car.carName}
                   className="w-full aspect-video object-cover rounded-2xl bg-slate-900 border border-slate-850"
                 />

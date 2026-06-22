@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../api/axios";
+import api, { BACKEND_URL } from "../api/axios";
 import { useParams, useNavigate, Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { Users, Fuel, Sparkles, Shield, ArrowLeft, CheckCircle2, BadgePercent, Zap, Star } from "lucide-react";
@@ -104,7 +104,7 @@ export default function CarDetails() {
             <div className="glass rounded-3xl overflow-hidden border border-slate-800/80 aspect-video bg-slate-900 flex items-center justify-center relative">
               {car.image ? (
                 <img
-                  src={`http://localhost:5001/uploads/${car.image}`}
+                  src={`${BACKEND_URL}/uploads/${car.image}`}
                   alt={car.carName}
                   className="w-full h-full object-cover"
                 />

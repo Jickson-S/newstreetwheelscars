@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../api/axios";
+import api, { BACKEND_URL } from "../api/axios";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { ArrowLeft, Compass, Calendar, MapPin, Receipt, CheckCircle2, XCircle, Clock, Milestone, ShieldCheck } from "lucide-react";
@@ -117,7 +117,7 @@ export default function BookingDetails() {
               <div className="flex items-start gap-4">
                 {booking.carId?.image ? (
                   <img
-                    src={`http://localhost:5001/uploads/${booking.carId.image}`}
+                    src={`${BACKEND_URL}/uploads/${booking.carId.image}`}
                     alt={booking.carId.carName}
                     className="w-32 aspect-video object-cover rounded-xl bg-slate-900 border border-slate-850 shrink-0"
                   />
